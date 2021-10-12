@@ -68,7 +68,7 @@ def file2matrix(filename):
 	#打开文件,此次应指定编码，
     
     fr = open(filename,'r',encoding = 'utf-8')
-	#读取文件所有内容
+	#读取文件所有内容test
     arrayOLines = fr.readlines()
     #针对有BOM的UTF-8文本，应该去掉BOM，否则后面会引发错误。
     arrayOLines[0]=arrayOLines[0].lstrip('\ufeff')
