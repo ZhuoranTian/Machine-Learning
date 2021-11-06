@@ -190,15 +190,15 @@ def autoNorm(dataSet):
 	#最大值和最小值的范围
 	ranges = maxVals - minVals
 	#shape(dataSet)返回dataSet的矩阵行列数
-	normDataSet = np.zeros(np.shape(dataSet))
+	normDataSet1 = np.zeros(np.shape(dataSet))
 	#返回dataSet的行数
 	m = dataSet.shape[0]
 	#原始值减去最小值
-	normDataSet = dataSet - np.tile(minVals, (m, 1))
+	normDataSet1 = dataSet - np.tile(minVals, (m, 1))
 	#除以最大和最小值的差,得到归一化数据
-	normDataSet = normDataSet / np.tile(ranges, (m, 1))
+	normDataSet1 = normDataSet1 / np.tile(ranges, (m, 1))
 	#返回归一化数据结果,数据范围,最小值
-	return normDataSet, ranges, minVals
+	return normDataSet1, ranges, minVals
 
 
 """
